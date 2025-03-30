@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akib Bhai er Salami Calculator</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a9d2158e44.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="bg-slate-100 flex flex-col items-center justify-center h-[100vh] gap-y-6"
+  >
+    <h1 class="text-2xl font-semibold max-w-[20ch] md:max-w-fit text-center">
+      Akib's Eid Salami Calculator for PCIU Students
+    </h1>
+
+    <main class="space-y-4">
+      <!-- salami calculator -->
+      <section class="flex flex-col gap-3">
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend text-base">
+            Your Codeforces Handle
+          </legend>
+          <input
+            type="text"
+            class="input border-primary outline-none focus:outline-none"
+            placeholder="Codeforces Username"
+            id="handleContainer"
+          />
+        </fieldset>
+
+        <button class="btn btn-primary" id="calculateBtn">
+          <div id="btnText" class="uppercase flex gap-1 items-center">
+            Calculate<i class="fa-solid fa-calculator"></i>
+          </div>
+
+          <span
+            id="loader"
+            class="hidden loading loading-dots loading-sm"
+          ></span>
+        </button>
+      </section>
+
+      <!-- calculated value displayer -->
+      <section>
+        <div class="hidden" id="salamiContainer"></div>
+      </section>
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_2" class="modal">
+      <div class="modal-box">
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-green-700">🕌Eid Mubarak!🌙✨</h3>
+          <div>
+            <h4 class="font-medium">To Claim Your Salami:</h4>
+            <ul class="">
+              <li>- Take a screenshot of your calculated salami.</li>
+              <li>- Send it to messenger, along with your bKash number.</li>
+            </ul>
+          </div>
+
+          <a
+            href="https://m.me/ar.akib2d"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Messenger Link
+            <i class="fa-brands fa-facebook-messenger"></i>
+          </a>
+        </div>
+
+        <div class="mt-4">
+          <div class="chat chat-start">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img alt="Md. Akibur Rahman" src="akib.jpg" />
+              </div>
+            </div>
+            <div class="chat-bubble">
+              Bug ছাড়া কোড, TLE ছাড়া রান, <br />ঈদ মোবারক, তোমার ঈদ হোক Optimal!
+            </div>
+          </div>
+        </div>
+
+        <span class="text-xs text-gray-600">AKIB - CSE 27</span>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
